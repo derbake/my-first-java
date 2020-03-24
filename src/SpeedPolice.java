@@ -16,14 +16,13 @@ public class SpeedPolice {
         int speed = 190;
         if (speed < 50) {
             System.out.println(" Нарушений нет");
-        } else if (speed > 50 && speed < 65){
+        } else if (speed > 50 && speed < 65) {
             System.out.println("устное порицание и лекция на 5 минут");
-        } else if (speed >100&speed <150) {
+        } else if (speed > 100 & speed < 150) {
             System.out.println("штраф 500 евро");
-        } else if(speed > 130){
+        } else if (speed > 130) {
             System.out.println("штраф в 1000 евро, забирание прав + на 3 года и конфискация транспортного средства");
-        }
-        else {
+        } else {
             // ujdyj
         }
     }

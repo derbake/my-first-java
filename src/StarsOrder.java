@@ -7,10 +7,10 @@ public class StarsOrder {
         for (int i = 10; i > 0; i--) {
             String star = " ";
             for (int j = 0; j < i; j++) {
-              star = star + "*";
+                star = star + "*";
             }
             System.out.println(star);
         }
-        }
     }
+}
 

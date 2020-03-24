@@ -14,7 +14,7 @@ public class Ampel {
             System.out.println("Запрещение движения. Ждать смену сигнала");
         } else if (color == "yellowBlink") {
             System.out.println("Движение разрешено, но есть опасность");
-        } else if (color == "red") {
+        } else {
             System.out.println("Движение запрещено");
         }
         // else
