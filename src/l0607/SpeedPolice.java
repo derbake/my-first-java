@@ -1,3 +1,5 @@
+package l0607;
+
 import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 
 /**

@@ -1,3 +1,5 @@
+package l02;
+
 import java.awt.dnd.peer.DragSourceContextPeer;
 
 /**

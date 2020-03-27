@@ -1,3 +1,5 @@
+package l05;
+
 /**
  * Created for myFirstProject.
  * Date: 17.03.2020; Time: 00:28
