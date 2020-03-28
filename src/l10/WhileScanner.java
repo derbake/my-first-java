@@ -18,5 +18,15 @@ public class WhileScanner {
         } else {
             System.out.println("иди домой");
         }
+        System.out.println("Сколько кофе ты выпиваешь в день?");
+        int coffee;
+        coffee = input.nextInt();
+        System.out.println("А не много ли будет  " + coffee + " чашки в день?");
+        String name;
+        System.out.println("Как тебя зовут?");
+        name = input.next();
+        System.out.println("Привет " + name);
+
+
     }
 }
