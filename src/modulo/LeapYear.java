@@ -5,12 +5,13 @@ import java.util.Scanner;
 /**
  * Created for myFirstProject.
  * Date: 30.03.2020; Time: 16:43
+ *
  */
 public class LeapYear {
 	public static void main(String[] args) {
 		int year;
 		Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите год на проверку високосности:");
+		System.out.println("Введите год на проверку високосности:");
 		year = scanner.nextInt();
 		System.out.println(year + " год. Проверка на високосность - " + leapYearProov(year));
 	}
@@ -18,16 +19,12 @@ public class LeapYear {
 	public static boolean leapYearProov(int year) {
 		boolean leapOrNotLeap = false;
 
-		int var1 = 400;
-		int var2 = 4;
-		int var3 = 100;
+		int var400 = 400;
+		int var4 = 4;
+		int var100 = 100;
 
-		if ((year % var2 == 0) || (year % var2 == 0 && year % var1 == 0) || (year % var2 == 0 && year % var3 != 0)) {
-			System.out.println("Високосный год");
-            leapOrNotLeap = true;
-		} else {
-			System.out.println("Не високосный год");
-		}
+		leapOrNotLeap = (year % var400 == 0) ||
+				(year % var4 == 0 && year % var100 != 0);
 		return leapOrNotLeap;
 	}
 }
