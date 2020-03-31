@@ -1,7 +1,5 @@
 package l0607;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-
 /**
  * Created for myFirstProject.
  * Date: 21.03.2020; Time: 00:28
