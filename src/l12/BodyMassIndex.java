@@ -18,16 +18,16 @@ public class BodyMassIndex {
     public static void main(String[] args) {
 
         double height;
-        double bodyMass;
-        // int bodyIndex = bodyMass / (height + height);
+        double weight;
+        // int bodyIndex = weight / (height + height);
 //int bodyIndex;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите рост, м");
         height = scanner.nextDouble();
         System.out.println("Введите вес в кг");
-        bodyMass = scanner.nextDouble();
+        weight = scanner.nextDouble();
 
-        double bodyMassIndex = bodyMass / (height * height);
+        double bodyMassIndex = weight / (height * height);
         System.out.println("Индекс массы тела " + bodyMassIndex);
 
         if (bodyMassIndex <= 16) {
@@ -42,9 +42,7 @@ public class BodyMassIndex {
             System.out.println("Ожирение");
         } else if (bodyMassIndex > 35 && bodyMassIndex <= 40) {
             System.out.println("Ожирение резкое");
-        } else if (bodyMassIndex > 40) {
-            System.out.println("Очень резкое ожирение");
-        }
+        } else System.out.println("Очень резкое ожирение");
     }
 }
 

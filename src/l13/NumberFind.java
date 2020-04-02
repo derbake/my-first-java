@@ -25,7 +25,6 @@ public class NumberFind {
             //System.out.println(remainder);
             if (remainder == mod1 || remainder == mod2 || remainder == mod3)
                 System.out.println(i + " " + remainder);
-
         }
     }
 }
