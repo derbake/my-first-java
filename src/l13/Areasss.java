@@ -5,11 +5,18 @@ import java.util.Scanner;
 /**
  * Created for myFirstProject.
  * Date: 01.04.2020; Time: 14:07
+ * авайте попробуем написать методы для вычисления площади и периметра фигур: квадрата
  */
 public class Areasss {
     public static void main(String[] args) {
         squareArea();
         System.out.println(squareArea3());
+        System.out.println(perimeter(7));
+    }
+
+    private static int perimeter(int side) {
+        int result = side * 4;
+        return result;
     }
 
     // один раз напищем их исполняющими.

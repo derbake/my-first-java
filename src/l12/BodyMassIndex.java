@@ -13,8 +13,7 @@ import java.util.Scanner;
  * Ознакомьтесь с термином - body mass index (BMI) Индекс массы тела .
  * Напишите программу расчёта индекса массы тела.
  */
-public class BodyMassIndex<bodyMassIndex> {
-
+public class BodyMassIndex {
 
     public static void main(String[] args) {
 
@@ -30,21 +29,22 @@ public class BodyMassIndex<bodyMassIndex> {
 
         double bodyMassIndex = bodyMass / (height * height);
         System.out.println("Индекс массы тела " + bodyMassIndex);
+
         if (bodyMassIndex <= 16) {
             System.out.println("Выраженный дефицит массы тела");
-        } else if (bodyMassIndex > 16 && bodyMassIndex < 18.5) {
+        } else if (bodyMassIndex > 16 && bodyMassIndex <= 18.5) {
             System.out.println("Недостаточная масса тела");
-        } else if (bodyMassIndex > 18.5 && bodyMassIndex < 24.99) {
+        } else if (bodyMassIndex > 18.5 && bodyMassIndex <= 25) {
             System.out.println("Норма");
-        } else if (bodyMassIndex > 25 && bodyMassIndex < 30) {
+        } else if (bodyMassIndex > 25 && bodyMassIndex <= 30) {
             System.out.println("Избыточная масса тела (предожирение)");
-        } else if (bodyMassIndex > 30 && bodyMassIndex < 35) {
+        } else if (bodyMassIndex > 30 && bodyMassIndex <= 35) {
             System.out.println("Ожирение");
-        } else if (bodyMassIndex > 35 && bodyMassIndex < 40) {
+        } else if (bodyMassIndex > 35 && bodyMassIndex <= 40) {
             System.out.println("Ожирение резкое");
         } else if (bodyMassIndex > 40) {
             System.out.println("Очень резкое ожирение");
-        } else {// ujdyj
         }
     }
 }
+
