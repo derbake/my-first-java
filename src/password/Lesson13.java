@@ -9,13 +9,21 @@ package password;
  * Подсказка - использовать только те знания, которые были уже изучены.
  * Существует как минимум два(на самом деле 222) разных подхода к решению этой проблемы. Не бойтесь пробовать.
  */
-/*public class Lesson13 {
+public class Lesson13 {
     public static void main(String[] args) {
-        latinGen(10);
+        System.out.println(latinGen(20));
     }
 
-    private static String latinGen(int длинаПароля) {
-        stringPassword
+    private static String latinGen(int lengthPassword) {
+        String result = "";
+        int min = 60; //65
+        int max = 200; //91
 
+        for (int i = 0; i < lengthPassword; i++) {
+            int charNumber = (int) (Math.random() * ((max - min) + 1)) + min;
+            char zahl = (char) charNumber;
+            result = result + zahl;
+        }
+        return result.toLowerCase();
     }
-}*/
+}
