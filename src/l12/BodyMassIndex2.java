@@ -1,33 +1,19 @@
 package l12;
 
-import com.sun.org.apache.xpath.internal.objects.XBoolean;
-import com.sun.org.apache.xpath.internal.objects.XBooleanStatic;
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-import org.w3c.dom.ls.LSOutput;
-
-import java.util.Scanner;
-
 /**
  * Created for myFirstProject.
- * Date: 31.03.2020; Time: 16:01
- * Ознакомьтесь с термином - body mass index (BMI) Индекс массы тела .
- * Напишите программу расчёта индекса массы тела.
+ * Date: 02.04.2020; Time: 18:09
  */
-public class BodyMassIndex {
-
+public class BodyMassIndex2 {
     public static void main(String[] args) {
+        System.out.println(BodyMassFind());
+    }
 
-        double height;
-        double weight;
+    private static double BodyMassFind() {
+        double height = 176;
+        double weight = 100;
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите рост, м");
-        height = scanner.nextDouble();
-        System.out.println("Введите вес в кг");
-        weight = scanner.nextDouble();
-
-        double bodyMassIndex = (weight / (height * height))*10000;
-        System.out.println("Индекс массы тела " + bodyMassIndex);
+        double bodyMassIndex = (weight / (height * height)) * 10000;
 
         if (bodyMassIndex <= 16) {
             System.out.println("Выраженный дефицит массы тела");
@@ -42,6 +28,7 @@ public class BodyMassIndex {
         } else if (bodyMassIndex > 35 && bodyMassIndex <= 40) {
             System.out.println("Ожирение резкое");
         } else System.out.println("Очень резкое ожирение");
+
+        return bodyMassIndex;
     }
 }
-
