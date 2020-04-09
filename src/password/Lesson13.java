@@ -20,10 +20,16 @@ public class Lesson13 {
         int max = 200; //91
 
         for (int i = 0; i < lengthPassword; i++) {
-            int charNumber = (int) (Math.random() * ((max - min) + 1)) + min;
+            int charNumber = intRandom(max, min);
             char zahl = (char) charNumber;
             result = result + zahl;
         }
         return result.toLowerCase();
     }
+
+    public static int intRandom(int max, int min) {
+        return (int) (Math.random() * ((max - min) + 1)) + min;
+    }
+
+
 }
