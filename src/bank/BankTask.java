@@ -16,40 +16,24 @@ package bank;
  */
 public class BankTask {
     public static void main(String[] args) {
-        int depositAmount = 100;
+        double depositAmount = 1000.0;
         int depositTime = 7;
         double depositInterest = 2.3;
-        System.out.println("Доход за 7 лет составил (евро): " + growthBankDeposit(depositAmount, depositTime, depositInterest));
+        growthBankDeposit(depositAmount, depositTime, depositInterest);
     }
 
-    public static double growthBankDeposit(int depositAmount, int depositTime, double depositInterest) {
-        double growthBankDeposit = 0.0;
-        double incomeSevenYears = 0.0;
+    public static void growthBankDeposit(double depositAmount, int depositTime, double depositInterest) {
+        double profitForAllYears = 0.0;
         depositInterest = depositInterest / 100;
-        
-        for (int i = 0; i < depositTime; i++) {
-            //первый год
-            if (i == 0) {
-                growthBankDeposit = (float) ((depositAmount) + (depositAmount * depositInterest));
-                System.out.println("Сумма вклада в конце первого года: " + growthBankDeposit);
+        double summe = depositAmount;
 
-                float incomeAmountedTo = (float) (depositAmount * depositInterest);
-                incomeSevenYears = incomeSevenYears + incomeAmountedTo;
-                int z = i + 1;
-                System.out.println("Проценты за год вклада: " + "Номер года: " + z + " " + incomeAmountedTo);
-            } else {
-                float incomeAmountedTo = (float) (growthBankDeposit * depositInterest);
-                incomeSevenYears = incomeSevenYears + incomeAmountedTo;
-                int z = i + 1;
-                System.out.println("Проценты за год вклада: " + "Номер года: " + z + " " + incomeAmountedTo);
-
-                growthBankDeposit = (float) ((growthBankDeposit) + (growthBankDeposit * depositInterest));
-            }
-            if (i == 1) {
-                System.out.println("Сумма вклада в конце второго года: " + growthBankDeposit);
-            }
-            System.out.println(growthBankDeposit);
+        for (int i = 1; i <= depositTime; i++) {
+            summe = summe + summe * depositInterest;
+            System.out.println("Сумма вклада в конце " + i + "-го года  " + summe);
         }
-        return incomeSevenYears;
+        
+        profitForAllYears = summe - depositAmount;
+        System.out.println("-----");
+        System.out.println("Доход за все годы " + depositTime + " составил: " + profitForAllYears);
     }
 }
