@@ -9,10 +9,10 @@ import java.util.Date;
  * Посчитать количество дней до нового года и дня рождения Пушкина.
  */
 public class GetTimeDate {
-    public static void main(String[] args)  {
+    public static void main(String[] args) {
         String dateCurrent = "16.04.2020";
         String dateEnd = "31.12.2020";
-        System.out.println("До нового года:  " + getDayNewYear(dateCurrent, dateEnd));
+        System.out.println("До нового года  " + getDayNewYear(dateCurrent, dateEnd) + "  дней");
     }
 
 
