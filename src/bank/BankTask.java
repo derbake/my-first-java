@@ -31,7 +31,7 @@ public class BankTask {
             summe = summe + summe * depositInterest;
             System.out.println("Сумма вклада в конце " + i + "-го года  " + summe);
         }
-        
+
         profitForAllYears = summe - depositAmount;
         System.out.println("-----");
         System.out.println("Доход за все годы " + depositTime + " составил: " + profitForAllYears);
