@@ -3,40 +3,29 @@ package uebungen;
 /**
  * Created for myFirstProject.
  * Date: 15.04.2020; Time: 15:51
+ * Найти наименьшее общее кратное чисел 20 и 30.
  */
 public class LeastCM {
     public static void main(String[] args) {
-
-        int a = 30;
-        int b = 30;
-        int nod1 = 0;
-        int nod2 = 0;
-        NOD(a, b, nod1, nod2);
-
-
+        int a = 6;
+        int b = 9;
+        System.out.println("наибольший общий делитель  " + findGreatestCommonDivisor(a, b));
+        System.out.println("НОК   " + findLeastCommonMultiple(a, b));
     }
 
-    private static void NOD(int a, int b, int nod1, int nod2) {
-        if (a != b) {
-            if (a > b) {
-                nod1 = a - b;
-                System.out.println("Наибольший общий делитель " + "nod_1  " + nod1);
-            } else {
-                nod2 = b - a;
-                System.out.println("Наибольший общий делитель " + "nod_1  " + nod2);
-            }
-        } else {
-            nod1 = a;
-            System.out.println("Наибольший общий делитель " + "nod_1  " + nod1);
-        }
+    private static int findLeastCommonMultiple(int a, int b) {
+        int result = (a / findGreatestCommonDivisor(a, b)) * (b / findGreatestCommonDivisor(a, b)) * findGreatestCommonDivisor(a, b);
+        return result;
+    }
 
-        //находим НОК
-        if (nod1 > 0) {
-            int findLCM1 = a * b / nod1;
-            System.out.println("Наименьший общее кратное равно:  " + findLCM1);
-        } else if (nod2 > 0) {
-            int findLCM2 = a * b / nod2;
-            System.out.println("Наименьший общее кратное равно:  " + findLCM2);
+    private static int findGreatestCommonDivisor(int a, int b) {
+        int temp;
+        while (a != 0 && b != 0) {
+            a = a % b;
+            temp = a;
+            a = b;
+            b = temp;
         }
+        return a + b;
     }
 }
