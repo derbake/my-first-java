@@ -7,9 +7,9 @@ package uebungen;
  */
 public class ComDiv {
     public static void main(String[] args) {
-        int a = 36;
-        int b = 60;
-        int c = 42;
+        int a = 40;
+        int b = 62;
+        int c = 56;
         findComDiv(a, b, c);
     }
 
