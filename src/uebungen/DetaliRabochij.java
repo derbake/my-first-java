@@ -18,6 +18,6 @@ public class DetaliRabochij {
     private static void findTime(int uhr, int detail, int addDetail) {
         int totalDetail = detail * uhr;
         int findTime = totalDetail / addDetail;
-        System.out.println("Общее количество часовы  " + findTime);
+        System.out.println("Общее количество часов для выполнения равно " + findTime);
     }
 }

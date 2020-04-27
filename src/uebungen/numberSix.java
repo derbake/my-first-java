@@ -16,6 +16,6 @@ public class numberSix {
 
     private static void findDistanse(int benzin, int distance, int benzin2) {
         int findDistanse = benzin2 * distance / benzin;
-        System.out.println(findDistanse);
+        System.out.println("Автомобиль может проехать на баке в 40л " + findDistanse + " км");
     }
 }

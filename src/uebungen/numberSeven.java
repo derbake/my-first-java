@@ -16,6 +16,6 @@ public class numberSeven {
     private static void howManyTeaBox(int numberTeaBox, int weightTeaBox, int weightTeaBox2) {
         int allWeight = numberTeaBox * weightTeaBox;
         int howManyTeaBox = allWeight / weightTeaBox2;
-        System.out.println(howManyTeaBox);
+        System.out.println("Получится " + howManyTeaBox + " пачек чая");
     }
 }
